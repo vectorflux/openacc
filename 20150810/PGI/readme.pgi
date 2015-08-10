@@ -1,0 +1,44 @@
+ssh santis
+cd /scratch/santis/piccinal/nina/openacc.git/20150810/PGI
+module swap PrgEnv-cray PrgEnv-pgi
+module load craype-accel-nvidia35
+
+Currently Loaded Modulefiles:
+  1) modules/3.2.10.3
+  2) nodestat/2.2-1.0502.53712.3.109.ari
+  3) sdb/1.0-1.0502.55976.5.27.ari
+  4) alps/5.2.1-2.0502.9041.11.6.ari
+  5) lustre-cray_ari_s/2.5_3.0.101_0.31.1_1.0502.8394.10.1-1.0502.17198.8.51
+  6) udreg/2.3.2-1.0502.9275.1.12.ari
+  7) ugni/5.0-1.0502.9685.4.24.ari
+  8) gni-headers/3.0-1.0502.9684.5.2.ari
+  9) dmapp/7.0.1-1.0502.9501.5.219.ari
+ 10) xpmem/0.1-2.0502.55507.3.2.ari
+ 11) hss-llm/7.2.0
+ 12) Base-opts/1.0.2-1.0502.53325.1.2.ari
+ 13) craype-network-aries
+ 14) craype-sandybridge
+ 15) craype/2.4.0
+ 16) slurm/14.03.7
+ 17) cray-mpich/7.2.3
+ 18) ddt/5.0
+ 19) pgi/15.3.0
+ 20) totalview-support/1.1.4
+ 21) totalview/8.11.0
+ 22) pmi/5.0.7-1.0000.10678.155.25.ari
+ 23) atp/1.8.2
+ 24) PrgEnv-pgi/5.2.40
+ 25) cudatoolkit/6.5.14-1.0502.9613.6.1
+ 26) craype-accel-nvidia35
+
+make clean
+make
+ftn  -acc -ta=nvidia:cc35  -c Parameters.F90
+ftn  -acc -ta=nvidia:cc35  -c RealPrecision.F90
+ftn  -acc -ta=nvidia:cc35  -c CommonVariables.F90
+ftn  -acc -ta=nvidia:cc35  -c Tait_Equation.F90
+ftn  -acc -ta=nvidia:cc35  -c Interactions_TVR_Fluid_Monaghan.F90
+ftn  -acc -ta=nvidia:cc35  -c launch_monaghan_loop.F90
+ftn  -acc -ta=nvidia:cc35  Parameters.o RealPrecision.o                    CommonVariables.o Tait_Equation.o                        Interactions_TVR_Fluid_Monaghan.o launch_monaghan_loop.o  -o PGI.SANTIS
+PGI / SANTIS / openacc executable ready
+
