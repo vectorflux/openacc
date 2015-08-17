@@ -14,7 +14,7 @@ endif
 LDFLAGS        = $(FLAGS)
 # OBJ            = Parameters.o RealPrecision.o FluidParticles_T.o CommonVariables.o Tait_Equation.o Initialize_Particles.o Interactions_TVR_Fluid_Monaghan.o launch_monaghan_loop.o
 OBJ            = Parameters.o RealPrecision.o                    CommonVariables.o Tait_Equation.o                        Interactions_TVR_Fluid_Monaghan.o launch_monaghan_loop.o
-LIB            = 
+LIB            = -Wc,CommonVariables_1.ptx -L/apps/daint/5.2.UP02/.cce/cce/8.4.0.215/craylibs/x86-64
 .SUFFIXES: .o .F90
 
 
