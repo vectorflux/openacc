@@ -1,0 +1,14 @@
+cd openacc.git/20150815/PGI
+
+module swap PrgEnv-cray PrgEnv-pgi
+export PGI=/apps/daint/sandbox/jgp/pgi/linux86-64/15.7
+export PATH=$PGI/bin:$PATH
+export LD_LIBRARY_PATH=$PGI/lib:$LD_LIBRARY_PATH
+module load craype-accel-nvidia35
+export CRAYPE_LINK_TYPE=dynamic
+
+make clean
+make
+
+
+make X=fail

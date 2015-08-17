@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Common_Variables	CommonVariables.F90	/^module Common_Variables$/;"	m
+D	Parameters.F90	/^  integer, parameter :: D=/;"	v	module:Parameters_mod
+DP	Parameters.F90	/^  integer, parameter :: DP=/;"	v	module:Parameters_mod
+FluidParticles_T	FluidParticles_T.F90	/^  type FluidParticles_T$/;"	t	module:FluidParticles_T_mod
+FluidParticles_T_mod	FluidParticles_T.F90	/^module FluidParticles_T_mod$/;"	m
+Initialize_Particle_mod	Initialize_Particles.F90	/^module Initialize_Particle_mod$/;"	m
+Interaction_TVR_Fluid_Monaghan	Interactions_TVR_Fluid_Monaghan.F90	/^  subroutine Interaction_TVR_Fluid_Monaghan(/;"	s	module:Interaction_TVR_Fluid_Monaghan_mod
+Interaction_TVR_Fluid_Monaghan_mod	Interactions_TVR_Fluid_Monaghan.F90	/^module Interaction_TVR_Fluid_Monaghan_mod$/;"	m
+Parameters_mod	Parameters.F90	/^module Parameters_mod$/;"	m
+RP	Parameters.F90	/^  integer, parameter :: RP=/;"	v	module:Parameters_mod
+RealPrecision	RealPrecision.F90	/^module RealPrecision$/;"	m
+SP	Parameters.F90	/^  integer, parameter :: SP=/;"	v	module:Parameters_mod
+SoundSpeed0	CommonVariables.F90	/^  real(RP):: SoundSpeed0 /;"	v	module:Common_Variables
+Tait_Equation	Tait_Equation.F90	/^module Tait_Equation$/;"	m
+Tait_Sound_SpeedA	Tait_Equation.F90	/^function Tait_Sound_SpeedA(/;"	f	module:Tait_Equation
+allocateFluidParticles	FluidParticles_T.F90	/^  subroutine allocateFluidParticles(/;"	s	module:FluidParticles_T_mod
+deallocateFluidParticles	FluidParticles_T.F90	/^  subroutine deallocateFluidParticles(/;"	s	module:FluidParticles_T_mod
+fixed_init_particles	Initialize_Particles.F90	/^  subroutine fixed_init_particles$/;"	s	module:Initialize_Particle_mod
+launch_monaghan_loop	launch_monaghan_loop.F90	/^program launch_monaghan_loop$/;"	p
+n	FluidParticles_T.F90	/^    int/;"	k	type:FluidParticles_T
+nrows	launch_monaghan_loop.F90	/^  integer :: nrows=/;"	v	program:launch_monaghan_loop
+rho	FluidParticles_T.F90	/^    real(RP), allocatable :: rho(/;"	k	type:FluidParticles_T

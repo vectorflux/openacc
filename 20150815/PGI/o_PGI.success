@@ -1,0 +1,48 @@
+# -----------------------------------------------
+# core file size          (blocks, -c) unlimited
+# data seg size           (kbytes, -d) unlimited
+# scheduling priority             (-e) 0
+# file size               (blocks, -f) unlimited
+# pending signals                 (-i) 257643
+# max locked memory       (kbytes, -l) 64
+# max memory size         (kbytes, -m) 536870912
+# open files                      (-n) 8192
+# pipe size            (512 bytes, -p) 8
+# POSIX message queues     (bytes, -q) 819200
+# real-time priority              (-r) 0
+# stack size              (kbytes, -s) unlimited
+# cpu time               (seconds, -t) unlimited
+# max user processes              (-u) 257643
+# virtual memory          (kbytes, -v) 26393040
+# file locks                      (-x) unlimited
+# -----------------------------------------------
+# -----------------------------------------------
+# -----------------------------------------------
+# -----------------------------------------------
+# SLURM_JOB_NODELIST = nid00012
+# submit command : "/users/piccinal/KEEP/slurm/sbatch.sh santis 1 ./PGI.SANTIS. 1 1 1"
+grep aprun runme.slurm.santis
+/usr/bin/time -p  aprun -n 1 -N 1 -d 1 -j 1  ./PGI.SANTIS.  
+# SLURM_JOB_NUM_NODES = 1
+# SLURM_JOB_ID = 8256
+# SLURM_JOBID = 8256
+# SLURM_NTASKS = 1 / -n --ntasks
+# SLURM_NTASKS_PER_NODE = 1 / -N --ntasks-per-node
+# SLURM_CPUS_PER_TASK = 1 / -d --cpus-per-task
+# OMP_NUM_THREADS = 1 / -d 
+# SLURM_NTASKS_PER_CORE = 1 / -j1 --ntasks-per-core
+# -----------------------------------------------
+Mon Aug 17 13:34:27 CEST 2015
+    999.0000000000000         998.0000000000000         997.0000000000000      
+    996.0000000000000         1000.000000000000         999.0000000000000      
+    998.0000000000000         997.0000000000000         996.0000000000000      
+    1000.000000000000         999.0000000000000     
+ OK
+    1.000000000000000         1.000000000000000         997.0000000000000      
+    996.0000000000000         1000.000000000000         999.0000000000000      
+    998.0000000000000         997.0000000000000         996.0000000000000      
+    1000.000000000000         999.0000000000000     
+Application 168197 resources: utime ~0s, stime ~0s, Rss ~149140, inblocks ~120, outblocks ~72
+real 3.08
+user 0.13
+sys 0.06
